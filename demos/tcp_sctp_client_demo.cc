@@ -205,7 +205,7 @@ public:
 
     future<> start(ipv4_addr server_addr, std::string test, unsigned ncon) {
         _server_addr = server_addr;
-        _concurrent_connections = ncon * smp::count;
+        _concurrent_connections = ncon;
         _total_pings = _pings_per_connection * _concurrent_connections;
         _test = test;
 
@@ -266,7 +266,7 @@ int main(int ac, char ** av) {
         }
 
         (void)clients.start().then([server, test, ncon] () {
-            return clients.invoke_on_all(&client::start, ipv4_addr{server}, test, ncon);
+            return clients.invoke_on(0,&client::start, ipv4_addr{server}, test, ncon);
         });
     });
 }

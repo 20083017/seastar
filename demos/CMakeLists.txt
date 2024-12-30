@@ -77,8 +77,8 @@ seastar_add_demo (line_count
 seastar_add_demo (l3
   SOURCES l3_demo.cc)
 
-seastar_add_demo (rpc
-  SOURCES rpc_demo.cc)
+#seastar_add_demo (rpc
+#  SOURCES rpc_demo.cc)
 
 seastar_add_demo (scheduling_group
   SOURCES scheduling_group_demo.cc)

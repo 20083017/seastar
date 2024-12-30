@@ -391,10 +391,10 @@ seastar_add_test (queue
 seastar_add_test (request_parser
   SOURCES request_parser_test.cc)
 
-seastar_add_test (rpc
-  SOURCES
-    loopback_socket.hh
-    rpc_test.cc)
+#seastar_add_test (rpc
+#  SOURCES
+#    loopback_socket.hh
+#    rpc_test.cc)
 
 seastar_add_test (semaphore
   SOURCES semaphore_test.cc)

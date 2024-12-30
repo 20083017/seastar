@@ -20,8 +20,8 @@
 # Copyright (C) 2022 Scylladb, Ltd.
 #
 
-seastar_add_app (rpc_tester
-  SOURCES rpc_tester.cc)
+#seastar_add_app (rpc_tester
+#  SOURCES rpc_tester.cc)
 
-target_link_libraries (app_rpc_tester
-  PRIVATE yaml-cpp::yaml-cpp)
+#target_link_libraries (app_rpc_tester
+#  PRIVATE yaml-cpp::yaml-cpp)
